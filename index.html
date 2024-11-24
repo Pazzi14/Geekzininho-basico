@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEEKZINHO BÁSICO - Moda Geek Minimalista</title>
+    <meta name="description" content="GEEKZINHO BÁSICO - Sua loja de roupas geek com estampas minimalistas. Camisetas, polos, moletons, calças e ecobags para expressar seu lado geek com estilo.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-icon"></div>
+        <p>Carregando o universo geek...</p>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <img src="https://drive.google.com/uc?export=view&id=1QSnufhLU5EhuKPAwyEuLYRZDKzHfwTm6" alt="GEEKZINHO BÁSICO Logo" class="logo">
+            <div class="pixel-art-icon"></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#entrega">Entrega</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <div id="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero animate__animated animate__fadeIn">
+            <h1>Bem-vindo ao GEEKZINHO BÁSICO</h1>
+            <p>Moda geek minimalista para expressar seu estilo único.</p>
+            <a href="#produtos" class="cta-button">Explorar Coleções</a>
+        </section>
+
+        <section id="geek-quotes">
+            <h2>Citação Geek do Dia</h2>
+            <blockquote id="quote-text"></blockquote>
+            <p id="quote-author"></p>
+        </section>
+
+        <section id="produtos">
+            <h2 class="animate__animated animate__slideInLeft">Nossas Coleções Temáticas</h2>
+            <div class="categoria-filtros">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="marvel">Marvel</button>
+                <button class="filtro-btn" data-categoria="dc">DC Comics</button>
+                <button class="filtro-btn" data-categoria="star-wars">Star Wars</button>
+                <button class="filtro-btn" data-categoria="anime">Anime</button>
+                <button class="filtro-btn" data-categoria="games">Video Games</button>
+                <button class="filtro-btn" data-categoria="rpg">RPG</button>
+                <button class="filtro-btn" data-categoria="sci-fi">Sci-Fi</button>
+                <button class="filtro-btn" data-categoria="fantasy">Fantasia</button>
+            </div>
+            <div class="produtos-grid">
+                <div class="produto marvel">
+                    <img src="camiseta-marvel1.jpg" alt="Camiseta Vingadores Minimalista">
+                    <h4>Camiseta Vingadores Minimalista</h4>
+                    <p class="preco">R$ 59,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto dc">
+                    <img src="camiseta-dc1.jpg" alt="Camiseta Liga da Justiça">
+                    <h4>Camiseta Liga da Justiça</h4>
+                    <p class="preco">R$ 59,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto star-wars">
+                    <img src="moletom-starwars1.jpg" alt="Moletom Darth Vader">
+                    <h4>Moletom Darth Vader</h4>
+                    <p class="preco">R$ 139,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto anime">
+                    <img src="camiseta-anime1.jpg" alt="Camiseta Dragon Ball Z">
+                    <h4>Camiseta Dragon Ball Z</h4>
+                    <p class="preco">R$ 54,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto games">
+                    <img src="moletom-games1.jpg" alt="Moletom The Legend of Zelda">
+                    <h4>Moletom The Legend of Zelda</h4>
+                    <p class="preco">R$ 149,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto rpg">
+                    <img src="camiseta-rpg1.jpg" alt="Camiseta D&D">
+                    <h4>Camiseta Dungeons & Dragons</h4>
+                    <p class="preco">R$ 54,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-content">
+                <img src="about-us.jpg" alt="Equipe GEEKZINHO BÁSICO" class="about-image">
+                <div class="sobre-texto">
+                    <p>GEEKZINHO BÁSICO nasceu da paixão por unir a cultura geek com moda minimalista. Nossa missão é oferecer roupas e acessórios que expressem sua identidade geek de forma elegante e discreta.</p>
+                    <p>Cada peça é cuidadosamente desenhada para combinar conforto, estilo e referências geek sutis. Nosso compromisso é com a qualidade e a satisfação dos nossos clientes, oferecendo camisetas, camisas polo, moletons, calças e ecobags com design único.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="entrega">
+            <h2>Informações de Entrega e Pagamento</h2>
+            <div class="entrega-info">
+                <div class="entrega-nacional">
+                    <h3>Entrega Nacional</h3>
+                    <p>Entregamos para todo o Brasil através dos Correios e transportadoras parceiras. Prazos e valores de frete variam conforme a região.</p>
+                </div>
+                <div class="entrega-internacional">
+                    <h3>Entrega Internacional</h3>
+                    <p>Enviamos para diversos países ao redor do mundo. Os prazos e custos de entrega internacional variam de acordo com o destino.</p>
+                </div>
+                <p class="entrega-nota">Para mais informações sobre prazos e custos de entrega, por favor, entre em contato conosco.</p>
+            </div>
+            <div class="pagamento-info">
+                <h3>Métodos de Pagamento</h3>
+                <ul>
+                    <li>PIX</li>
+                    <li>Cartão de Crédito</li>
+                    <li>Cartão de Débito</li>
+                </ul>
+                <p class="pagamento-nota">Todos os pagamentos são processados com segurança para garantir a proteção dos seus dados.</p>
+            </div>
+        </section>
+
+        <section id="carrinho-e-frete">
+            <h2>Carrinho e Cálculo de Frete</h2>
+            <div id="carrinho">
+                <h3>Seu Carrinho</h3>
+                <ul id="itens-carrinho"></ul>
+                <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+            </div>
+            <div id="calculo-frete">
+                <h3>Cálculo de Frete</h3>
+                <select id="tipo-entrega">
+                    <option value="nacional">Entrega Nacional</option>
+                    <option value="internacional">Entrega Internacional</option>
+                </select>
+                <input type="text" id="cep-ou-pais" placeholder="CEP (Brasil) ou País">
+                <button id="calcular-frete">Calcular Frete</button>
+                <p id="resultado-frete"></p>
+            </div>
+        </section>
+
+        <section id="geek-blog">
+            <h2>Blog Geek</h2>
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <h3>Top 10 Teorias de Fãs que se Provaram Verdadeiras</h3>
+                    <p>Descubra as teorias de fãs mais incríveis que acabaram se tornando canon...</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </article>
+                <article class="blog-post">
+                    <h3>A Evolução dos RPGs: De D&D a Cyberpunk 2077</h3>
+                    <p>Uma jornada através da história dos jogos de RPG e como eles moldaram a cultura geek...</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GEEKZINHO BÁSICO</h3>
+                <p>Moda geek minimalista para todos os estilos.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#entrega">Entrega</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Conquistas Geek</h3>
+                <div class="achievements">
+                    <span class="achievement" title="Colecionador de Camisetas">🏆👕</span>
+                    <span class="achievement" title="Mestre dos Memes">🏆🎭</span>
+                    <span class="achievement" title="Maratonista de Séries">🏆📺</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GEEKZINHO BÁSICO. Todos os direitos reservados. Que a força esteja com você!</p>
+        </div>
+    </footer>
+
+    <div id="carrinho-sidebar" class="carrinho-sidebar">
+        <h3>Seu Carrinho</h3>
+        <ul id="itens-carrinho-sidebar"></ul>
+        <p>Total: R$ <span id="total-carrinho-sidebar">0.00</span></p>
+        <button id="fechar-carrinho">Fechar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
