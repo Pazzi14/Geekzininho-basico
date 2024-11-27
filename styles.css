@@ -1,3 +1,4 @@
+/* Variáveis Globais */
 :root {
     --primary-color: #1a1a2e;
     --secondary-color: #16213e;
@@ -7,6 +8,7 @@
     --dark-text: #333;
 }
 
+/* Reset e Estilos Básicos */
 * {
     margin: 0;
     padding: 0;
@@ -18,40 +20,43 @@ body {
     background-color: var(--primary-color);
     color: var(--light-text);
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* Animação de Estrelas */
 @keyframes animStar {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-2000px);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+}
+
+#stars, #stars2, #stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 #stars {
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+    background: transparent url("assets/stars.png") repeat top center;
+    z-index: -3;
     animation: animStar 50s linear infinite;
 }
+
 #stars2 {
-    width: 2px;
-    height: 2px;
-    background: transparent;
-    box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+    background: transparent url("assets/stars2.png") repeat top center;
+    z-index: -2;
     animation: animStar 100s linear infinite;
 }
+
 #stars3 {
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+    background: transparent url("assets/stars3.png") repeat top center;
+    z-index: -1;
     animation: animStar 150s linear infinite;
 }
 
+/* Header e Navegação */
 header {
     background-color: rgba(26, 26, 46, 0.8);
     backdrop-filter: blur(5px);
@@ -66,10 +71,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo img {
     height: 50px;
+    width: auto;
 }
 
 .nav-links {
@@ -78,7 +86,7 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 .nav-links a {
@@ -88,21 +96,22 @@ nav {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a:focus {
     color: var(--text-color);
 }
 
 .nav-icons a {
     color: var(--light-text);
-    margin-left: 20px;
+    margin-left: 1.25rem;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
-.nav-icons a:hover {
+.nav-icons a:hover, .nav-icons a:focus {
     color: var(--text-color);
 }
 
+/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -131,7 +140,7 @@ nav {
 
 .cta-button {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 0.75rem 1.5rem;
     background-color: var(--text-color);
     color: var(--light-text);
     text-decoration: none;
@@ -140,7 +149,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.cta-button:hover {
+.cta-button:hover, .cta-button:focus {
     background-color: var(--accent-color);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
@@ -152,17 +161,11 @@ nav {
 }
 
 @keyframes float {
-    0% {
-        transform: translatey(0px);
-    }
-    50% {
-        transform: translatey(-20px);
-    }
-    100% {
-        transform: translatey(0px);
-    }
+    0%, 100% { transform: translatey(0); }
+    50% { transform: translatey(-20px); }
 }
 
+/* Collections Section */
 #collections {
     padding: 5rem 10%;
 }
@@ -218,6 +221,7 @@ nav {
     opacity: 1;
 }
 
+/* Featured Products Section */
 #featured-products {
     padding: 5rem 10%;
     background-color: var(--secondary-color);
@@ -271,6 +275,7 @@ nav {
     font-weight: bold;
 }
 
+/* About Section */
 #about {
     padding: 5rem 10%;
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
@@ -305,10 +310,11 @@ nav {
     transition: color 0.3s ease;
 }
 
-.learn-more:hover {
+.learn-more:hover, .learn-more:focus {
     color: var(--light-text);
 }
 
+/* Blog Section */
 #blog {
     padding: 5rem 10%;
 }
@@ -358,6 +364,7 @@ nav {
     font-weight: bold;
 }
 
+/* Newsletter Section */
 #newsletter {
     padding: 5rem 10%;
     background-color: var(--accent-color);
@@ -395,10 +402,11 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-#newsletter-form button:hover {
+#newsletter-form button:hover, #newsletter-form button:focus {
     background-color: var(--secondary-color);
 }
 
+/* Footer */
 footer {
     background-color: var(--primary-color);
     padding: 3rem 10% 1rem;
@@ -435,7 +443,7 @@ footer {
     transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
+.footer-section ul li a:hover, .footer-section ul li a:focus {
     color: var(--text-color);
 }
 
@@ -451,7 +459,7 @@ footer {
     transition: color 0.3s ease;
 }
 
-.social-icon:hover {
+.social-icon:hover, .social-icon:focus {
     color: var(--text-color);
 }
 
@@ -462,72 +470,7 @@ footer {
     border-top: 1px solid var(--accent-color);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 5rem 5%;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .nav-icons {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    #newsletter-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #newsletter-form input {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-/* Animações e efeitos adicionais */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-.hover-glow:hover {
-    box-shadow: 0 0 10px var(--text-color);
-}
-
-.text-glow {
-    text-shadow: 0 0 5px var(--text-color);
-}
-
-/* Estilo para o carrinho lateral */
+/* Cart Sidebar */
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -601,11 +544,11 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.checkout-btn:hover {
+.checkout-btn:hover, .checkout-btn:focus {
     background-color: var(--accent-color);
 }
 
-/* Estilo para o overlay de loading */
+/* Loading Overlay */
 .loading-overlay {
     position: fixed;
     top: 0;
@@ -631,4 +574,91 @@ footer {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--light-text);
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    #newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newsletter-form input {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .cart-sidebar {
+        width: 100%;
+    }
+}
+
+/* Animações e efeitos adicionais */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 10px var(--text-color);
+}
+
+.text-glow {
+    text-shadow: 0 0 5px var(--text-color);
 }
