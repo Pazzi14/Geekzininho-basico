@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEEKZINHO BÁSICO - O Universo Geek em Suas Mãos</title>
+    <title>GEEKZINHO BÁSICO - Portal Interdimensional Geek</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="https://files.fm/u/89a5u8q7s2">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 </head>
 <body>
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-
+    <div id="universe-background"></div>
+    
     <header>
         <nav>
             <div class="logo">
-                <img src="https://files.fm/u/89a5u8q7s2" alt="GEEKZINHO BÁSICO Logo">
+                <img src="assets/logo-hologram.png" alt="GEEKZINHO BÁSICO Logo" class="hologram">
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#collections">Coleções</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#home" class="neon-text">Dimensão Inicial</a></li>
+                <li><a href="#shop" class="neon-text">Loja Quântica</a></li>
+                <li><a href="#blog" class="neon-text">Crônicas Geek</a></li>
+                <li><a href="#community" class="neon-text">Nexus Comunidade</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="#search" class="icon-search"><i class="fas fa-search"></i></a>
-                <a href="#account" class="icon-account"><i class="fas fa-user"></i></a>
-                <a href="#cart" class="icon-cart"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="#search" class="icon-search hologram"><i class="fas fa-search"></i></a>
+                <a href="#account" class="icon-account hologram"><i class="fas fa-user-astronaut"></i></a>
+                <a href="#cart" class="icon-cart hologram"><i class="fas fa-space-shuttle"></i><span class="cart-count">0</span></a>
             </div>
         </nav>
     </header>
@@ -37,108 +34,70 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Bem-vindo ao GEEKZINHO BÁSICO</h1>
-                <p>Onde a moda encontra o universo geek</p>
-                <a href="#collections" class="cta-button">Explorar Coleções</a>
+                <h1 class="glitch" data-text="GEEKZINHO BÁSICO">GEEKZINHO BÁSICO</h1>
+                <p class="cyberpunk-text">Seu portal para o multiverso geek</p>
+                <a href="#shop" class="cta-button plasma-effect">Iniciar Jornada Interdimensional</a>
             </div>
-            <div class="hero-image">
-                <img src="assets/hero-image.png" alt="Coleção Geek">
-            </div>
-        </section>
-
-        <section id="collections">
-            <h2>Nossas Coleções Épicas</h2>
-            <div class="collection-grid">
-                <div class="collection-item marvel">
-                    <img src="assets/marvel-collection.jpg" alt="Coleção Marvel">
-                    <h3>Marvel</h3>
-                    <a href="#marvel" class="collection-link">Explorar</a>
-                </div>
-                <div class="collection-item star-wars">
-                    <img src="assets/star-wars-collection.jpg" alt="Coleção Star Wars">
-                    <h3>Star Wars</h3>
-                    <a href="#star-wars" class="collection-link">Explorar</a>
-                </div>
-                <div class="collection-item anime">
-                    <img src="assets/anime-collection.jpg" alt="Coleção Anime">
-                    <h3>Anime</h3>
-                    <a href="#anime" class="collection-link">Explorar</a>
-                </div>
-                <div class="collection-item games">
-                    <img src="assets/games-collection.jpg" alt="Coleção Games">
-                    <h3>Games</h3>
-                    <a href="#games" class="collection-link">Explorar</a>
-                </div>
+            <div class="hero-hologram">
+                <!-- Holograma 3D animado aqui -->
             </div>
         </section>
 
-        <section id="featured-products">
-            <h2>Produtos em Destaque</h2>
-            <div class="product-slider">
-                <!-- Produtos serão inseridos dinamicamente via JavaScript -->
+        <section id="shop" class="quantum-grid">
+            <h2 class="section-title glitch" data-text="Loja Quântica">Loja Quântica</h2>
+            <div class="product-multiverse">
+                <!-- Produtos serão gerados dinamicamente aqui -->
             </div>
         </section>
 
-        <section id="about">
-            <h2>Nossa História</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>O GEEKZINHO BÁSICO nasceu da paixão por unir o universo geek com moda de qualidade. Nossa missão é trazer o melhor da cultura pop para o seu guarda-roupa, com designs exclusivos e materiais premium.</p>
-                    <a href="#learn-more" class="learn-more">Saiba Mais</a>
+        <section id="blog" class="cyber-chronicles">
+            <h2 class="section-title glitch" data-text="Crônicas Geek">Crônicas Geek</h2>
+            <div class="blog-matrix">
+                <!-- Posts do blog serão gerados dinamicamente aqui -->
+            </div>
+        </section>
+
+        <section id="community" class="nexus-hub">
+            <h2 class="section-title glitch" data-text="Nexus Comunidade">Nexus Comunidade</h2>
+            <div class="community-portal">
+                <div class="forum-threads">
+                    <!-- Tópicos do fórum serão gerados dinamicamente aqui -->
                 </div>
-                <div class="about-image">
-                    <img src="assets/about-us.jpg" alt="Nossa Equipe">
+                <div class="live-chat">
+                    <!-- Chat ao vivo aqui -->
+                </div>
+                <div class="event-calendar">
+                    <!-- Calendário de eventos geek aqui -->
                 </div>
             </div>
-        </section>
-
-        <section id="blog">
-            <h2>Blog Geek</h2>
-            <div class="blog-grid">
-                <!-- Posts do blog serão inseridos dinamicamente via JavaScript -->
-            </div>
-        </section>
-
-        <section id="newsletter">
-            <h2>Fique por Dentro!</h2>
-            <p>Assine nossa newsletter para receber novidades, promoções exclusivas e conteúdo geek!</p>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit">Assinar</button>
-            </form>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
+    <footer class="cyber-footer">
+        <div class="footer-grid">
             <div class="footer-section">
-                <h3>GEEKZINHO BÁSICO</h3>
-                <p>Sua loja de moda geek favorita!</p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
+                <h3 class="neon-text">GEEKZINHO BÁSICO</h3>
+                <p>Explorando o multiverso geek desde 2024</p>
             </div>
             <div class="footer-section">
-                <h3>Links Rápidos</h3>
+                <h3 class="neon-text">Portais Dimensionais</h3>
                 <ul>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#shipping">Envio e Devolução</a></li>
-                    <li><a href="#terms">Termos e Condições</a></li>
-                    <li><a href="#privacy">Política de Privacidade</a></li>
+                    <li><a href="#" class="cyber-link">Sobre Nós</a></li>
+                    <li><a href="#" class="cyber-link">Trabalhe Conosco</a></li>
+                    <li><a href="#" class="cyber-link">Política de Privacidade</a></li>
+                    <li><a href="#" class="cyber-link">Termos de Serviço</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contato</h3>
-                <p>Email: contato@geekzinhobasico.com</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Endereço: Rua dos Geeks, 42 - São Paulo, SP</p>
+                <h3 class="neon-text">Comunicação Intergaláctica</h3>
+                <form id="newsletter-form" class="cyber-form">
+                    <input type="email" placeholder="Seu e-mail interdimensional" required>
+                    <button type="submit" class="cyber-button">Assinar</button>
+                </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 GEEKZINHO BÁSICO. Todos os direitos reservados.</p>
+            <p>&copy; 2024 GEEKZINHO BÁSICO. Todos os direitos reservados em todas as dimensões.</p>
         </div>
     </footer>
 
