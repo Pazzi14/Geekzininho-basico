@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEEKZINHO BÁSICO - Portal Interdimensional Geek</title>
+    <title>GEEKZINHO BÁSICO - Seu Portal Geek de Compras</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="universe-background"></div>
-    
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/logo-hologram.png" alt="GEEKZINHO BÁSICO Logo" class="hologram">
+                <img src="content://media/external/downloads/1000018461" alt="GEEKZINHO BÁSICO Logo" class="glow-effect">
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="neon-text">Dimensão Inicial</a></li>
-                <li><a href="#shop" class="neon-text">Loja Quântica</a></li>
-                <li><a href="#blog" class="neon-text">Crônicas Geek</a></li>
-                <li><a href="#community" class="neon-text">Nexus Comunidade</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#collections">Coleções</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#community">Comunidade</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="#search" class="icon-search hologram"><i class="fas fa-search"></i></a>
-                <a href="#account" class="icon-account hologram"><i class="fas fa-user-astronaut"></i></a>
-                <a href="#cart" class="icon-cart hologram"><i class="fas fa-space-shuttle"></i><span class="cart-count">0</span></a>
+                <a href="#search" class="icon-search"><i class="fas fa-search"></i></a>
+                <a href="#account" class="icon-account"><i class="fas fa-user-astronaut"></i></a>
+                <a href="#cart" class="icon-cart"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
             </div>
         </nav>
     </header>
@@ -35,69 +37,89 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1 class="glitch" data-text="GEEKZINHO BÁSICO">GEEKZINHO BÁSICO</h1>
-                <p class="cyberpunk-text">Seu portal para o multiverso geek</p>
-                <a href="#shop" class="cta-button plasma-effect">Iniciar Jornada Interdimensional</a>
-            </div>
-            <div class="hero-hologram">
-                <!-- Holograma 3D animado aqui -->
+                <p>Seu universo geek em um só lugar</p>
+                <a href="#products" class="cta-button">Explorar Produtos</a>
             </div>
         </section>
 
-        <section id="shop" class="quantum-grid">
-            <h2 class="section-title glitch" data-text="Loja Quântica">Loja Quântica</h2>
-            <div class="product-multiverse">
-                <!-- Produtos serão gerados dinamicamente aqui -->
+        <section id="products" class="products-grid">
+            <h2>Produtos em Destaque</h2>
+            <div class="product-container">
+                <!-- Produtos serão inseridos aqui dinamicamente -->
             </div>
         </section>
 
-        <section id="blog" class="cyber-chronicles">
-            <h2 class="section-title glitch" data-text="Crônicas Geek">Crônicas Geek</h2>
-            <div class="blog-matrix">
-                <!-- Posts do blog serão gerados dinamicamente aqui -->
-            </div>
-        </section>
-
-        <section id="community" class="nexus-hub">
-            <h2 class="section-title glitch" data-text="Nexus Comunidade">Nexus Comunidade</h2>
-            <div class="community-portal">
-                <div class="forum-threads">
-                    <!-- Tópicos do fórum serão gerados dinamicamente aqui -->
+        <section id="collections" class="collections">
+            <h2>Nossas Coleções</h2>
+            <div class="collection-grid">
+                <div class="collection-item" style="background-image: url('assets/marvel-collection.jpg');">
+                    <h3>Marvel</h3>
                 </div>
-                <div class="live-chat">
-                    <!-- Chat ao vivo aqui -->
+                <div class="collection-item" style="background-image: url('assets/dc-collection.jpg');">
+                    <h3>DC</h3>
                 </div>
-                <div class="event-calendar">
-                    <!-- Calendário de eventos geek aqui -->
+                <div class="collection-item" style="background-image: url('assets/anime-collection.jpg');">
+                    <h3>Anime</h3>
+                </div>
+                <div class="collection-item" style="background-image: url('assets/games-collection.jpg');">
+                    <h3>Games</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2>Blog Geek</h2>
+            <div class="blog-grid">
+                <!-- Posts do blog serão inseridos aqui dinamicamente -->
+            </div>
+        </section>
+
+        <section id="community" class="community">
+            <h2>Comunidade Geek</h2>
+            <div class="community-content">
+                <div class="forum-preview">
+                    <h3>Fórum em Destaque</h3>
+                    <!-- Tópicos do fórum serão inseridos aqui dinamicamente -->
+                </div>
+                <div class="events">
+                    <h3>Próximos Eventos</h3>
+                    <!-- Eventos serão inseridos aqui dinamicamente -->
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="cyber-footer">
-        <div class="footer-grid">
+    <footer>
+        <div class="footer-content">
             <div class="footer-section">
-                <h3 class="neon-text">GEEKZINHO BÁSICO</h3>
-                <p>Explorando o multiverso geek desde 2024</p>
+                <h3>GEEKZINHO BÁSICO</h3>
+                <p>Seu portal geek desde 2024</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <div class="footer-section">
-                <h3 class="neon-text">Portais Dimensionais</h3>
+                <h3>Links Rápidos</h3>
                 <ul>
-                    <li><a href="#" class="cyber-link">Sobre Nós</a></li>
-                    <li><a href="#" class="cyber-link">Trabalhe Conosco</a></li>
-                    <li><a href="#" class="cyber-link">Política de Privacidade</a></li>
-                    <li><a href="#" class="cyber-link">Termos de Serviço</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#shipping">Envio e Devolução</a></li>
+                    <li><a href="#terms">Termos e Condições</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3 class="neon-text">Comunicação Intergaláctica</h3>
-                <form id="newsletter-form" class="cyber-form">
-                    <input type="email" placeholder="Seu e-mail interdimensional" required>
-                    <button type="submit" class="cyber-button">Assinar</button>
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit">Assinar</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 GEEKZINHO BÁSICO. Todos os direitos reservados em todas as dimensões.</p>
+            <p>&copy; 2024 GEEKZINHO BÁSICO. Todos os direitos reservados.</p>
         </div>
     </footer>
 
